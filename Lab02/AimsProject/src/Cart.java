@@ -15,6 +15,79 @@ public class Cart {
 		}
 	}
 	
+	public void addDigitalVideoDisc(DigitalVideoDisc[] discs) {
+		int added = 0;
+		int fail = 0;
+		
+		for (int i = 0; i<discs.length; i++) {
+			if(qutyOrdered == MAX_NUMBERS_ORDERED) {
+				fail++;
+			}
+			else {
+				itemsOrdered[qutyOrdered] = discs[i];
+				qutyOrdered++;
+				added++;
+			}
+		}
+		
+		System.out.println(added + " discs have been added.");
+		System.out.println(fail + " discs fail to be added.");
+	}
+	
+	public void addDigitalVideoDisc(DigitalVideoDisc disc, DigitalVideoDisc... discs) {
+		int added = 0;
+		int fail = 0;
+		
+		if (qutyOrdered == MAX_NUMBERS_ORDERED) {
+			fail++;
+		}
+		else {
+			itemsOrdered[qutyOrdered] = disc;
+			qutyOrdered++;
+			added++;
+		}
+		
+		for (DigitalVideoDisc d: discs) {
+			if (qutyOrdered == MAX_NUMBERS_ORDERED) {
+				fail++;
+			}
+			else {
+				itemsOrdered[qutyOrdered] = d;
+				qutyOrdered++;
+				added++;
+			}
+		}
+		
+		System.out.println(added + " discs have been added.");
+		System.out.println(fail + " discs fail to be added.");
+	}
+	
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+		int added = 0;
+		int fail = 0;
+		
+		if (qutyOrdered == MAX_NUMBERS_ORDERED) {
+			fail++;
+		}
+		else {
+			itemsOrdered[qutyOrdered] = dvd1;
+			qutyOrdered++;
+			added++;
+		}
+		
+		if (qutyOrdered == MAX_NUMBERS_ORDERED) {
+			fail++;
+		}
+		else {
+			itemsOrdered[qutyOrdered] = dvd2;
+			qutyOrdered++;
+			added++;
+		}
+		
+		System.out.println(added + " discs have been added.");
+		System.out.println(fail + " discs fail to be added.");
+	}
+	
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		int numRemoved = 0;
 		for(int i=0; i<qutyOrdered; i++) {
