@@ -1,11 +1,14 @@
 
 public class DigitalVideoDisc {
 	//attributes
+	private static int nbDigitalVideoDiscs = 0;
+	
 	private String title;
 	private String category;
 	private String director;
 	private int length;
 	private float cost;
+	private int id;
 	
 	//getters and setters
 	public String getTitle() {
@@ -28,25 +31,29 @@ public class DigitalVideoDisc {
 	}
 	
 	//constructors
+	public DigitalVideoDisc() {
+		nbDigitalVideoDiscs++;
+		this.id = nbDigitalVideoDiscs;
+	}
 	public DigitalVideoDisc(String title) {
-		super();
+		this();
 		this.title = title;
 	}
 	public DigitalVideoDisc(String title, String category, float cost) {
-		super();
+		this();
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
 	}
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
-		super();
+		this();
 		this.title = title;
 		this.category = category;
 		this.director = director;
 		this.cost = cost;
 	}
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-		super();
+		this();
 		this.title = title;
 		this.category = category;
 		this.director = director;
