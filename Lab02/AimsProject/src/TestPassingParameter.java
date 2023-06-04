@@ -6,9 +6,12 @@ public class TestPassingParameter {
 		DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
 		DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
 		
-		swap(jungleDVD, cinderellaDVD);
+		DigitalVideoDisc tmp = jungleDVD;
+		jungleDVD = cinderellaDVD;
+		cinderellaDVD = tmp;
 		System.out.println("jungle dvd title: " + jungleDVD.getTitle());
 		System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
+		
 		
 		changeTitle(jungleDVD, cinderellaDVD.getTitle());
 		System.out.println("jungle dvd title: " + jungleDVD.getTitle());
