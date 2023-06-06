@@ -13,7 +13,6 @@ public class Aims {
 		anOrder.addDigitalVideoDisc(dvd2);
 		anOrder.addDigitalVideoDisc(dvd2);
 		
-		
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
 		anOrder.addDigitalVideoDisc(dvd3);
 		
@@ -24,6 +23,9 @@ public class Aims {
 		anOrder.removeDigitalVideoDisc(dvd2);
 		System.out.println("The total cost is:");
 		System.out.println(anOrder.totalCost());
+		
+		anOrder.printCart();
+		anOrder.searchByTitle();
 	}
 
 }

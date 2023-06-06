@@ -7,6 +7,11 @@ public class DigitalVideoDisc {
 	private int length;
 	private float cost;
 	
+	//toString
+	public String toString() {
+		return "DVD - " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + "$";
+	}
+	
 	//getters and setters
 	public String getTitle() {
 		return title;
@@ -23,6 +28,15 @@ public class DigitalVideoDisc {
 	public float getCost() {
 		return cost;
 	}
+<<<<<<< Updated upstream:Lab02/Source/DigitalVideoDisc.java
+=======
+	public int getId() {
+		return id;
+	}
+	public void setTitle(String newTitle) {
+		this.title = newTitle;
+	}
+>>>>>>> Stashed changes:Lab02/AimsProject/src/DigitalVideoDisc.java
 	
 	//constructors
 	public DigitalVideoDisc(String title) {
@@ -49,6 +63,11 @@ public class DigitalVideoDisc {
 		this.director = director;
 		this.length = length;
 		this.cost = cost;
+	}
+	
+	//isMatch
+	public boolean isMatch(String t) {
+		return(this.title.contains(t));
 	}
 	
 }
