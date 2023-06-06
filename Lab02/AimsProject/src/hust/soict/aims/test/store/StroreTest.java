@@ -1,3 +1,7 @@
+package hust.soict.aims.test.store;
+
+import hust.soict.aims.disc.DigitalVideoDisc;
+import hust.soict.aims.store.Store;
 
 public class StroreTest {
 	public static void main(String[] args) {
