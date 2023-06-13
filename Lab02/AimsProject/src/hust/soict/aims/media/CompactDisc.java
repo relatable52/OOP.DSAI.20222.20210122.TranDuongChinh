@@ -10,6 +10,16 @@ public class CompactDisc extends Disc implements Playable {
 		super();
 	}
 	
+	public CompactDisc(String title) {
+		super();
+		this.title = title;
+	}
+	
+	//toString
+	public String toString() {
+		return "CD - " + this.id + " " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + "$";
+	}
+	
 	//implement play
 	public void play() {
 		System.out.println("Playing CD: " + this.getTitle());

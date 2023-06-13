@@ -9,6 +9,16 @@ public class Book extends Media{
 		super();
 	}
 	
+	public Book(String title) {
+		super();
+		this.title = title;
+	}
+	
+	//toString
+	public String toString() {
+		return "Book - " + this.id + " " + this.title + " - " + this.category + " : " + this.cost + "$";
+	}
+	
 	public boolean addAuthor(String authorName) {
 		boolean ret = true;
 		for(String a: this.authors) {

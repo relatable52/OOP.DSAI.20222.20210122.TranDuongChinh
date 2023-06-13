@@ -3,7 +3,7 @@ package hust.soict.aims.media;
 public class DigitalVideoDisc extends Disc implements Playable {
 	//toString
 	public String toString() {
-		return "DVD - " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + "$";
+		return "DVD - " + this.id + " " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + "$";
 	}
 
 	//constructors
