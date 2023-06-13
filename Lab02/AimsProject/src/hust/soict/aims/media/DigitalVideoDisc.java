@@ -1,44 +1,11 @@
-package hust.soict.aims.disc;
+package hust.soict.aims.media;
 
-public class DigitalVideoDisc {
-	//attributes
-	private String title;
-	private String category;
-	private String director;
-	private int length;
-	private float cost;
-	
+public class DigitalVideoDisc extends Disc{
 	//toString
 	public String toString() {
 		return "DVD - " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + "$";
 	}
-	
-	//getters and setters
-	public String getTitle() {
-		return title;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public String getDirector() {
-		return director;
-	}
-	public int getLength() {
-		return length;
-	}
-	public float getCost() {
-		return cost;
-	}
-<<<<<<< Updated upstream:Lab02/Source/DigitalVideoDisc.java
-=======
-	public int getId() {
-		return id;
-	}
-	public void setTitle(String newTitle) {
-		this.title = newTitle;
-	}
->>>>>>> Stashed changes:Lab02/AimsProject/src/DigitalVideoDisc.java
-	
+
 	//constructors
 	public DigitalVideoDisc(String title) {
 		super();
