@@ -2,13 +2,23 @@ package hust.soict.aims.media;
 
 import java.util.*;
 
-public class CompactDisc extends Disc{
+public class CompactDisc extends Disc implements Playable {
 	private String artist;
 	private ArrayList<Track> tracks;
 
 	public CompactDisc() {
 		super();
 	}
+	
+	//implement play
+	public void play() {
+		System.out.println("Playing CD: " + this.getTitle());
+		System.out.println("CD length: " + this.getLength());
+		for (Track t: this.tracks) {
+			t.play();
+		} 
+	}
+
 	
 	public boolean addTrack(Track track) {
 		boolean ret = true;
