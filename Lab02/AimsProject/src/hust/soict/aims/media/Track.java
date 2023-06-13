@@ -8,6 +8,11 @@ public class Track implements Playable {
 		// TODO Auto-generated constructor stub
 	}
 	
+	//equals
+	public boolean equals(Object obj) {
+		return(((Track)obj).getTitle() == this.title && ((Track)obj).getLength() == this.length);
+	}
+	
 	public String getTitle() {
 		return title;
 	}

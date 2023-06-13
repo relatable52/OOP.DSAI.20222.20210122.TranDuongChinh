@@ -12,6 +12,11 @@ public class Media {
 		this.id = total;
 	}
 	
+	//equals
+	public boolean equals(Object obj) {
+		return(((Media)obj).getTitle() == this.title);
+	}
+	
 	//Getters and setters
 	public int getId() {
 		return id;
