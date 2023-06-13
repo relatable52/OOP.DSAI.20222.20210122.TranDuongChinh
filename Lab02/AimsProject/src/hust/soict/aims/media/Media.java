@@ -1,11 +1,17 @@
 package hust.soict.aims.media;
 
+import java.util.*;
+
 public class Media {
 	protected int id;
 	protected String title;
 	protected String category;
 	protected float cost;
 	protected static int total = 0;
+	
+	//comparator
+	public static final Comparator<Media> COMPARE_BY_TITLE = new MediaComparatorByTitle();
+	public static final Comparator<Media> COMPARE_BY_COST = new MediaComparatorByCost();
 	
 	public Media() {
 		total++;

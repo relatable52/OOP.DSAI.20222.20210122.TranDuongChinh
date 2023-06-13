@@ -13,9 +13,23 @@ public class MediaTest {
 		Book book1 = new Book("Calculus 1");
 		media.add(book1);
 		
-		CompactDisc cd1 = new CompactDisc("English");
+		CompactDisc cd1 = new CompactDisc("Algebra");
 		media.add(cd1);
 		
+		//test printing media
+		for(Media m: media) {
+			System.out.println(m);
+		}
+		
+		//test sorting media
+		System.out.println();
+		Collections.sort(media, Media.COMPARE_BY_COST);
+		for(Media m: media) {
+			System.out.println(m);
+		}
+		
+		System.out.println();
+		Collections.sort(media, Media.COMPARE_BY_TITLE);
 		for(Media m: media) {
 			System.out.println(m);
 		}
