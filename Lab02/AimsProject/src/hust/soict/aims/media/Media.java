@@ -10,8 +10,8 @@ public class Media {
 	protected static int total = 0;
 	
 	//comparator
-	public static final Comparator<Media> COMPARE_BY_TITLE = new MediaComparatorByTitle();
-	public static final Comparator<Media> COMPARE_BY_COST = new MediaComparatorByCost();
+	public static final Comparator<Media> COMPARE_BY_TITLE = new MediaComparatorByTitleCost();
+	public static final Comparator<Media> COMPARE_BY_COST = new MediaComparatorByCostTitle();
 	
 	public Media() {
 		total++;
