@@ -1,6 +1,11 @@
 package hust.soict.dsai.swing;
 
-public class SwingAccumulator {
+import javax.swing.*;
+
+public class SwingAccumulator extends JFrame {
+	private JTextField tfInput;
+	private JTextField tfOutput;
+	private int sum = 0;
 
 	public SwingAccumulator() {
 		// TODO Auto-generated constructor stub
