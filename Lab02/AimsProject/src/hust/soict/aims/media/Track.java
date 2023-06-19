@@ -2,7 +2,7 @@ package hust.soict.aims.media;
 
 public class Track implements Playable {
 	private String title;
-	private int length;
+	private int length = 0;
 	
 	public Track() {
 		// TODO Auto-generated constructor stub
