@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CompactDisc extends Disc implements Playable {
 	private String artist;
-	private ArrayList<Track> tracks;
+	private ArrayList<Track> tracks = new ArrayList<Track>();
 
 	public CompactDisc() {
 		super();
@@ -15,9 +15,16 @@ public class CompactDisc extends Disc implements Playable {
 		this.title = title;
 	}
 	
+	public CompactDisc(String title, float cost, String artist) {
+		super();
+		this.title = title;
+		this.cost = cost;
+		this.artist = artist;
+	}
+	
 	//toString
 	public String toString() {
-		return "CD - " + this.id + " " + this.title + " - " + this.category + " - " + this.director + " - " + this.length + ": " + this.cost + "$";
+		return "CD - " + this.id + " " + this.title + " - " + this.category + " - " + this.director + " - " + this.artist + " - " + this.length + ": " + this.cost + "$";
 	}
 	
 	//implement play

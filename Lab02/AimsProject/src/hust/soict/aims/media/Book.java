@@ -14,6 +14,12 @@ public class Book extends Media{
 		this.title = title;
 	}
 	
+	public Book(String title, float cost) {
+		super();
+		this.title = title;
+		this.cost = cost;
+	}
+	
 	//toString
 	public String toString() {
 		return "Book - " + this.id + " " + this.title + " - " + this.category + " : " + this.cost + "$";

@@ -1,13 +1,14 @@
 package hust.soict.aims.cart;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 import hust.soict.aims.media.*;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
-	private int qutyOrdered = 0;
+	//private int qutyOrdered = 0;
+	
+	public Cart() {}
 	
 	public boolean addMedia(Media m) {
 		if(this.itemsOrdered.size() > MAX_NUMBERS_ORDERED) {
@@ -18,6 +19,7 @@ public class Cart {
 			this.itemsOrdered.add(m);
 			System.out.println("Media added");
 		}
+		System.out.println("Total number in cart: " + this.itemsOrdered.size());
 		return true;
 	}
 	
@@ -29,6 +31,7 @@ public class Cart {
 		else {
 			System.out.println("No media in cart");
 		}
+		System.out.println("Total number in cart: " + this.itemsOrdered.size());
 		return ret;
 	}
 	
@@ -46,7 +49,7 @@ public class Cart {
 			System.out.println((i + 1) + ". " + this.itemsOrdered.get(i));
 		}
 		System.out.println("Total cost: " + this.totalCost() + "$");
-		System.out.println("***************************************************");
+		System.out.println("**************************************************");
 	}
 	
 	public void searchById() {
@@ -71,7 +74,7 @@ public class Cart {
 		System.out.print("Enter the keyword: ");
 		String inputKeyword = userInput.nextLine();
 		for(Media m: this.itemsOrdered) {
-			if(((DigitalVideoDisc)m).isMatch(inputKeyword)) {
+			if(m.getTitle().contains(inputKeyword)) {
 				System.out.println("+  " + m);
 				matchFound = true;
 			}
@@ -79,5 +82,17 @@ public class Cart {
 		if(!matchFound) {
 			System.out.println("No matching DVD found.");
 		}
+	}
+	
+	public void sortByTitle() {
+		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_TITLE);
+	}
+	
+	public void sortByCost() {
+		Collections.sort(this.itemsOrdered, Media.COMPARE_BY_COST);
+	}
+
+	public ArrayList<Media> getItemsOrdered() {
+		return itemsOrdered;
 	}
 }
