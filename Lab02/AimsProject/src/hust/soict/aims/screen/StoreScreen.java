@@ -39,7 +39,7 @@ public class StoreScreen extends JFrame{
 		
 		setVisible(true);
 		setTitle("Store");
-		setSize(1024, 700);
+		setSize(1024, 768);
 	}
 	
 	private JPanel createNorth() {
